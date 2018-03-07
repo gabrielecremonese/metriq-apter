@@ -1,0 +1,30 @@
+
+# Created by https://www.gitignore.io/api/eclipse,intellij
+
+### Eclipse ###
+
+.metadata
+bin/
+tmp/
+target/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+.apt_generated/
+
+
+# Eclipse Core
+.project
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+*/target/**
