@@ -4,6 +4,9 @@
 ### Eclipse ###
 
 .metadata
+.project
+.classpath
+.springBeans
 bin/
 tmp/
 target/
@@ -16,15 +19,6 @@ local.properties
 .loadpath
 .recommenders
 .apt_generated/
-
-
-# Eclipse Core
-.project
-
-# External tool builders
 .externalToolBuilders/
-
-# Locally stored "Eclipse launch configurations"
 *.launch
-
 */target/**
