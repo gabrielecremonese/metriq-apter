@@ -13,14 +13,6 @@ public class WelcomeRestController {
 	@Autowired
 	private ApplicationRepository applicationRepository;
 	
-	
-	
-	@RequestMapping("/")
-	public String home() {
-		
-		return "¡¡Hello World!!!";
-	}
-	
 	@RequestMapping("/add-application")
 	public String addApplication() {
 		

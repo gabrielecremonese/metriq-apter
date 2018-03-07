@@ -6,13 +6,13 @@
 *	git hub versioning
 *	mongo integration
 *	lombok integration
+*	thymeleaf integration (this allow a total separation developing back and front at same time with fake/mock data)
  
  
  
  <<<<<<<< TODO >>>>>>>>
 
 *	controller layer
-*	thymeleaf integration (this allow a total separation developing back and front at same time with fake data)
 *	entity layer
 *	logic/services layer
 
