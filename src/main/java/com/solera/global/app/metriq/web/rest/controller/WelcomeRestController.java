@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.solera.global.app.metriq.logic.MetricConfigurationService;
 import com.solera.global.app.metriq.mongo.entity.Application;
 import com.solera.global.app.metriq.mongo.repository.ApplicationRepository;
 
@@ -13,16 +14,19 @@ public class WelcomeRestController {
 	@Autowired
 	private ApplicationRepository applicationRepository;
 	
+	@Autowired 
+	MetricConfigurationService metricConfigurationService;
+	
 	@RequestMapping("/add-application")
 	public String addApplication() {
 		
 		String result = null;
-		String name = String.valueOf(System.currentTimeMillis());
 		
-		applicationRepository.save(new Application(name, "sn1"));
+		applicationRepository.deleteAll();
+		
+		metricConfigurationService.loadConfigurations();
 		
 		result = printAll();
-		
 		
 		return result;
 	}

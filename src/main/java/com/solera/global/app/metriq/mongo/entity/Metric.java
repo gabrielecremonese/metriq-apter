@@ -2,18 +2,12 @@ package com.solera.global.app.metriq.mongo.entity;
 
 import org.springframework.data.annotation.Id;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Setter
 @Getter
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class Metric {
+public abstract class Metric implements IMetric {
 	
 	@Id
 	private String id;
@@ -21,9 +15,15 @@ public class Metric {
 	private String name;
 	private String shortName;
 	
+	private MetricStatus metricStatus;
+	
 	public Metric(String name, String shortName) {
 		this.name = name;
 		this.shortName = shortName;
 	}
 
+	public void setMetricStatus(MetricStatus metricStatus) {
+		this.metricStatus = metricStatus;
+	}
+	
 }

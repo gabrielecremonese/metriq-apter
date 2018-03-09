@@ -1,5 +1,8 @@
 package com.solera.global.app.metriq.mongo.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
 
 import lombok.AllArgsConstructor;
@@ -21,9 +24,18 @@ public class Application {
 	private String name;
 	private String shortName;
 	
+	private List<IMetric> metricList;
+	
 	public Application(String name, String shortName) {
 		this.name = name;
 		this.shortName = shortName;
+		metricList = new ArrayList<IMetric>();
+	}
+
+	public void addMetric(IMetric metric) {
+
+		metricList.add(metric);
+		
 	}
 
 }
